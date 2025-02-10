@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="wrapper">  
+        <h1>Debjyoti's Weather App</h1>
+
+        <div class="tab-container">
+            <p class="tab" data-userWeather>Your Weather</p>
+            <p class="tab" data-searchWeather>Search Weather</p>
+        </div>
+
+        <div class="weather-container">
+            <!-- Grant Access location Container -->
+            <div class="sub-container grant-location-container">
+                <img src="./assets/location.png" width="80" height="80" loading="lazy">
+                <p>Grant Location Access</p>
+                <p>Allow Access to get weather Information</p>
+                <button class="btn" data-grantAccess>Grant Access</button>
+            </div>
+
+            <!-- Search Form -->
+            <div class="page-container">
+            <div class="search-container">
+                <form class="form-container" data-searchForm>
+                    <input class="search-input" placeholder="Search for city..." data-searchInput>
+                    <button class="btn">
+                        <img src="./assets/search.png" width="20" height="20" loading="lazy">
+                    </button>
+                </form>
+                <!-- Dropdown for recently searched cities -->
+                <div class="dropdown" data-dropdown>
+                    <ul data-dropdownList></ul>
+                </div>
+            </div>
+            </div>
+
+
+
+
+
+
+            <!-- Loading screen Container -->
+            <div class="sub-container loading-container">
+                <img src="./assets/loading.gif" width="150" height="150">
+                <p>Loading</p>
+            </div>
+
+            <!-- Show weather info -->
+            <div class="sub-container user-info-container">
+                <!-- City Name and Flag -->
+                <div class="name">
+                    <p data-cityName></p>
+                    <img data-countryIcon>
+                </div>
+                <!-- Weather Desc -->
+                <p data-weatherDesc></p>
+                <!-- Weather Icon -->
+                <img data-weatherIcon>
+                <!-- City Temperature -->
+                <p data-temp></p>
+
+                <!-- 3cards Parameters -->
+                <div class="parameter-container">
+                    <!-- card-1 -->
+                    <div class="parameter">
+                        <img src="./assets/wind.png">
+                        <p>Windspeed</p>
+                        <p data-windspeed></p>
+                    </div>
+                    <!-- card-2 -->
+                    <div class="parameter">
+                        <img src="./assets/humidity.png">
+                        <p>Humidity</p>
+                        <p data-humidity></p>
+                    </div>
+                    <!-- card-3 -->
+                    <div class="parameter">
+                        <img src="./assets/cloud.png">
+                        <p>Clouds</p>
+                        <p data-cloudiness></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5-Day Forecast Container -->
+            <div class="sub-container forecast-container">
+                <h2>5-Day Forecast</h2>
+                <div class="forecast-cards" data-forecastCards>
+                    <!-- Forecast cards will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+
+        <div class="sub-container api-error-container">
+            <img src="./assets/not-found.png" data-notFoundImg />
+            <p data-apiErrorText></p>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
