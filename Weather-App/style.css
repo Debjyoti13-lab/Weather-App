@@ -15,10 +15,8 @@
 html, body {
    
     height: 100%;
-    
-    background: -webkit-linear-gradient(to right, #4da0b0, #d39d38); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #4da0b0, #d39d38); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    /* background: linear-gradient(to bottom, #003366, #1aa3ffdd); */
+    background: -webkit-linear-gradient(to right, #4da0b0, #d39d38); 
+    background: linear-gradient(to right, #4da0b0, #d39d38); 
     background-attachment: fixed; 
     background-repeat: no-repeat;
     background-size: cover; 
@@ -246,9 +244,6 @@ h1 {
     transition: all 0.3s ease-in-out;
 }
 
-
-
-/* Forecast Container Styles */
 .forecast-container {
     display: none;
     flex-direction: column;
@@ -360,9 +355,6 @@ h2 {
 .dropdown ul li:hover {
     background-color: var(--colorLight1);
 }
-
-
-
 .api-error-container {
     display: none;
     flex-direction: column;
